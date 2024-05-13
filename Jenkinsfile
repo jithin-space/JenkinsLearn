@@ -4,6 +4,11 @@ pipeline {
         stage('build') {
             steps {
                 sh 'node --version'
+                sh '''
+                    echo "Multiline shell steps testing"
+                    pwd
+                    ls -lah
+                '''
             }
         }
     }
